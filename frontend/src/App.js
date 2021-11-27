@@ -4,16 +4,18 @@ import './Button.js';
 import { Button } from './Button';
 import { PageHome} from './PageHome.js';
 import {PageBar} from './PageBar.js';
+import { PageRestaurant } from './PageRestaurant';
 import {Navbar} from './Navbar.js';
 
 class App extends React.Component {
   constructor(props){
     super(props);
     const pages = [<PageHome />,
-                    <PageBar />];
+                   <PageBar />,
+                   <PageRestaurant/>];
     this.state = {
       pagesTab : pages,
-      currentPage : pages[1]};
+      currentPage : pages[2]};
 
     this.handleChange = this.handleChange.bind(this)
   }
