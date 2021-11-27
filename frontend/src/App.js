@@ -5,7 +5,7 @@ import { Button } from './Button';
 import { PageHome} from './PageHome.js';
 import { PageBar } from './PageBar.js';
 import { Navbar } from './Navbar.js';
-import {PageRestaurant } from './PageRestaurant';
+import { PageRestaurant } from './PageRestaurant';
 import { PageCuisine } from './PageCuisine';
 import { PageStat } from './PageStat';
 
