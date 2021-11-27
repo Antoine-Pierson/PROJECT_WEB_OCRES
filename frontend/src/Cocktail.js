@@ -18,7 +18,7 @@ export class Cocktail extends React.Component {
                 </form>
 
                 <div>
-                    <Image src={this.props.imgCktl}></Image>
+                    <Image src={this.props.imgCktl} width={200} height={200}></Image>
                     <Text txt={this.props.recipe}></Text>
                 </div>
             </div>
