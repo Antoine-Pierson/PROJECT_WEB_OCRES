@@ -8,7 +8,6 @@ export class Text extends React.Component {
         this.state = {
             txt: this.props.lastPublished
         };
-        this.handleClick = this.handleClick.bind(this);
     }
 
     render() {

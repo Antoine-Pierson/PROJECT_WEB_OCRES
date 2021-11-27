@@ -1,4 +1,6 @@
 import React from 'react';
+import {Order} from './Order.js'
+import {Cocktail} from './Cocktail.js'
 
 export class PageBar extends React.Component {
     constructor(props){
@@ -11,11 +13,8 @@ export class PageBar extends React.Component {
     render() {
         return (
             <div className="bar">
-                <div class="Navbar">
-                    <Navbar/>
-                </div>
                 <Order/>
-                <Cocktail imgCktl="cocktail-de-champagne.jpg" recipe="Champagne avec quelques framboises"/>
+                <Cocktail imgCktl="cocktail-de-champagne.jpeg" recipe="Champagne avec quelques framboises"/>
             </div>
         )
     }

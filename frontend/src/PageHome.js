@@ -1,27 +1,18 @@
 import React from 'react';
-import {Navbar} from './Navbar.js';
 import { WidgetHome } from './WidgetHome.js';
 
 export class PageHome extends React.Component {
-    constructor(props, title) {
+    constructor(props) {
       super(props);
       this.state = {
-        Title: title,
+        Title: "home",
         widgetHome : <WidgetHome />
       };
-      this.handleChangeStyle = this.handleChangeStyle.bind(this);
     }
-
-    handleChangeStyle (e) {
-      this.setState( () => ({bgdColor: this.getRandomColor()}))
-    };
 
     render() {
       return(
       <div>
-        <div class="Navbar">
-          <Navbar text="Home"/>
-        </div>
           {this.state.widgetHome}
       </div>
       )

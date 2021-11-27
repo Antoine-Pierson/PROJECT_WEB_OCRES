@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card } from './Card';
+import { Button } from './Button';
 
 export class Order extends React.Component {
     constructor(props) {
@@ -12,12 +13,12 @@ export class Order extends React.Component {
     }
 
     handleChange (e) {
-        setTxtOrder(e.target.value);
+        this.setState({txtOrder: e.target.value});
     }
 
     addOrder () {
-        const newOrder = tabOrder.concat(<Card text={this.state.txtOrder}/> );
-        tabOrder(newOrder);
+        const newOrder = this.state.tabOrder.concat(<Card text={this.state.txtOrder}/> );
+        this.state.tabOrder(newOrder);
     }
 
      
@@ -26,12 +27,12 @@ export class Order extends React.Component {
             <div className="order">
                 <h1>ORDERS</h1>
                 <div>
-                    <input type="text" value={txtOrder} onChange={this.handleChange}/>
+                    <input type="text" value={this.state.txtOrder} onChange={this.handleChange}/>
                     <Button name={"add"} onclick={this.addOrder}>add</Button>
                 </div>
 
                 <div>
-                    {tabOrder.map((card => {card}))}
+                    {this.state.tabOrder.map((card => <p>{card}</p>))}
                 </div>
             </div>
         )

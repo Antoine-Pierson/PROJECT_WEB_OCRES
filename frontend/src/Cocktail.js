@@ -1,4 +1,6 @@
 import React from 'react';
+import { Image } from './Image';
+import { Text } from './Text';
 
 export class Cocktail extends React.Component {
     constructor(props) {
