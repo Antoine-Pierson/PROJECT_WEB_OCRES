@@ -24,6 +24,7 @@ export class Order extends React.Component {
     render() {
         return (
             <div className="order">
+                <h1>ORDERS</h1>
                 <div>
                     <input type="text" value={txtOrder} onChange={this.handleChange}/>
                     <Button name={"add"} onclick={this.addOrder}>add</Button>

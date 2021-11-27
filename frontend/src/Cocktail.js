@@ -12,6 +12,7 @@ export class Cocktail extends React.Component {
     render() {
         return (
             <div className="cockail">
+                <h1>COCKTAILS</h1>
                 <form>
                     <input type="search" id="cktl"></input>
                     <input type="submit" value="Submit"></input>
