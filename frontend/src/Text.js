@@ -1,6 +1,5 @@
 import React from 'react';
 import './Button.js'
-import {LikeButton} from './Button';
 import './Profil.css';
 
 export class Text extends React.Component {
