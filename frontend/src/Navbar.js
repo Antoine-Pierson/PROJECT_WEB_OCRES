@@ -1,31 +1,55 @@
 import React from 'react';
 import { Button } from './Button';
 import { Image } from './Image';
+import { Nav, Navbar as _navbar }  from 'react-bootstrap';
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link
+} from "react-router-dom";
+
+import {PageHome} from './PageHome';
+import {PageBar} from './PageBar';
+import {PageRestaurant} from './PageRestaurant';
+import {PageCuisine} from './PageCuisine'
+import { PageStat } from './PageStat';
 
 export class Navbar extends React.Component {
 
     render() {
         return (
-            <nav>
-                <Image src="./Logo.png" width={50} height={50}/>
-                <ul>
-                    <li>
-                        <p value ="0" onClick={ () => this.props.handleChange(0)}>Home</p>
-                    </li>
-                    <li>
-                    <p value ="1" onClick={ () => this.props.handleChange(1)}>Restaurant</p>
-                    </li>
-                    <li>
-                        <p value ="2" onClick={ () => this.props.handleChange(2)}>Bar</p>
-                    </li>
-                    <li>
-                        <p value ="3" onClick={ () => this.props.handleChange(3)}>Cuisine</p>
-                    </li>
-                    <li>
-                        <p value ="4" onClick={ () => this.props.handleChange(4)}>Statistiques</p>
-                    </li>
-                </ul>
-            </nav>
+            <Router>
+                <div>
+                    <_navbar bg="dark" variant="dark" sticky="top" expand="lg" collapseOnSelect>
+                        <_navbar.Brand href="#">
+                            <Image src="./Logo.png" width={50} height={35} alt="Logo" />
+                            {" "} Logo
+                        </_navbar.Brand>
+
+                        <_navbar.Toggle aria-control="responsive-navbar-nav"/>
+                        <_navbar.Collapse id="responsive-navbar-nav">
+                            <Nav>
+                                <Nav.Link as={Link} to="/home">Home</Nav.Link>
+                                <Nav.Link as={Link} to="/restaurant">Restaurant</Nav.Link>
+                                <Nav.Link as={Link} to="/bar">Bar</Nav.Link>
+                                <Nav.Link as={Link} to="/cuisine">Cuisine</Nav.Link>
+                                <Nav.Link as={Link} to="/stats">Stats</Nav.Link>
+                            </Nav>
+                        </_navbar.Collapse>
+                    </_navbar>
+                </div>
+                <div>
+                    <Routes>
+                        <Route path="/" element= {<PageHome />} />
+                        <Route path="/home" element={<PageHome />} />
+                        <Route path="/restaurant" element= {<PageRestaurant />} />
+                        <Route path="/bar" element= {<PageBar />} />
+                        <Route path="/cuisine" element= {<PageCuisine />} />
+                        <Route path="/stats" element= {<PageStat />} />
+                    </Routes>
+                </div>
+            </Router>
         )
     }
 }
