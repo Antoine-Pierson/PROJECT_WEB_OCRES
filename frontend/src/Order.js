@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card } from './Card';
 import { Button } from './Button';
+import { Container, Row, Col} from 'react-bootstrap';
 
 export class Order extends React.Component {
     constructor(props) {
@@ -20,7 +21,7 @@ export class Order extends React.Component {
      
     render() {
         return (
-            <div className="order">
+            <div className="order" class="container">
                 <h1>ORDERS</h1>
                 <div>
                     <input type="text" placeholder="Entrer la table" ref={this.state.table}/>
@@ -28,9 +29,11 @@ export class Order extends React.Component {
                     <Button name={"add"} handleChange={this.addOrder}>add</Button>
                 </div>
 
-                <div>
+                <div className="card" class="container justify-content-md-center">
                     <p>Commande en attente</p>
-                    {this.state.tabOrder}
+                    <div class="row g-3">
+                        {this.state.tabOrder}
+                    </div>
                 </div>
             </div>
         )
