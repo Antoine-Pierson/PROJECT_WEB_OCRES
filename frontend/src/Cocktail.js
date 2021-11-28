@@ -22,7 +22,7 @@ export class Cocktail extends React.Component {
 
                 <div>
                     <Image src={this.props.imgCktl} width={200} height={200}></Image>
-                    <Text txt={this.props.recipe}></Text>
+                    <Text txt={"Commentaire : " + this.props.recipe}></Text>
                 </div>
             </div>
         )

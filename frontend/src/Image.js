@@ -6,8 +6,7 @@ export class Image extends React.Component {
             <img src={"./" + this.props.src} 
             value={this.props.value} 
             width={this.props.width} 
-            height={this.props.height} 
-            onClick={ () => this.props.handleChange(this)} />
+            height={this.props.height} />
         )
     }
 }
