@@ -1,13 +1,10 @@
 import React from 'react';
+import { Button as Btn } from 'react-bootstrap';
 
 export class Button extends React.Component {
     render() {
         return (
-            <input 
-                type="button"  
-                value={this.props.name} 
-                onClick={ () => this.props.handleChange(this)}
-            />
+            <Btn variant={this.props.variant} onClick={ () => this.props.handleChange(this)} > {this.props.name} </Btn>
         )
     }
 }
