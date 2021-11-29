@@ -13,7 +13,7 @@ export class PageBar extends React.Component {
     render() {
         return (
             <div className="bar">
-                <Order/>
+                <Order room="Bar" />
                 <Cocktail imgCktl="cocktail-de-champagne.jpeg" recipe="Champagne avec quelques framboises"/>
             </div>
         )

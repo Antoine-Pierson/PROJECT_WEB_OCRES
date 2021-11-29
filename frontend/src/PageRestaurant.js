@@ -16,7 +16,7 @@ export class PageRestaurant extends React.Component {
                 <h1>RESERVATIONS</h1>
                 <Calendar minDetail="year" view="month"/>
 
-                <Order/>
+                <Order room="Restaurant" />
             </div>
         )
     }

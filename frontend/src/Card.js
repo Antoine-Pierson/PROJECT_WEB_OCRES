@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card as _Card } from 'react-bootstrap';
+import { Card as _Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 
 export class Card extends React.Component {
     render() {
@@ -13,6 +13,9 @@ export class Card extends React.Component {
                         {this.props.commande}
                     </_Card.Text>
                     </_Card.Body>
+                    <ListGroup className="list-group-flush">
+                        <ListGroupItem>Cras justo odio</ListGroupItem>
+                    </ListGroup>
                 </_Card>
             </div>
         );

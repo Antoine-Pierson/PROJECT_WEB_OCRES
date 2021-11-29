@@ -12,7 +12,7 @@ export class PageCuisine extends React.Component {
     render() {
       return(
         <div className="Cuisine">
-          <Order/>
+          <Order room="Cuisine" />
         </div>
       )
     }
