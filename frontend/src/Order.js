@@ -24,7 +24,7 @@ export class Order extends React.Component {
             <div className="order" class="container justify-content-md-center">
                 <h1>ORDERS</h1>
                 <div className="order-form" class="row">
-                    <div class="row justify-content-center">
+                    <div class="row gy-2 justify-content-center">
                         <div class="col-10 col-sm-5">
                             <Form>
                                 <Form.Group>

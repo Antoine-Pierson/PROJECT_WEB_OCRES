@@ -21,7 +21,7 @@ export class Navbar extends React.Component {
         return (
             <Router>
                 <div>
-                    <_navbar bg="dark" variant="dark" sticky="top" expand="lg" collapseOnSelect>
+                    <_navbar collapseOnSelect bg="dark" variant="dark" fixed="top" expand="lg">
                         <_navbar.Brand href="#">
                             <Image src="./Logo.png" width={50} height={35} alt="Logo" />
                             {" "} Logo
