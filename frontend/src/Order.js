@@ -15,7 +15,7 @@ export class Order extends React.Component {
     }
 
     addOrder(){
-        this.setState({tabOrder: this.state.tabOrder.concat(<Card table={this.state.table.current.value}  commande={this.state.txtOrder.current.value}/>)});
+        this.setState({tabOrder: this.state.tabOrder.concat(<Card table={this.state.table.current.value}  commande={this.state.txtOrder.current.value} label="Commande servie"/>)});
     }
 
      
@@ -23,10 +23,10 @@ export class Order extends React.Component {
         let form;
         if(this.props.room == "Cuisine"){
             form = null;
-            this.state.tabOrder = this.state.tabOrder.concat(<Card table="1"  commande="Poulet Roti"/>);
-            this.state.tabOrder = this.state.tabOrder.concat(<Card table="2"  commande="Riz Curry"/>);
+            this.state.tabOrder = this.state.tabOrder.concat(<Card table="1"  commande="Poulet Roti" label="Commande prête"/>);
+            this.state.tabOrder = this.state.tabOrder.concat(<Card table="2"  commande="Riz Curry" label="Commande prête"/>);
         }
-        else if(this.props.room == "Restaurant"){
+        else if(this.props.room == "Restaurant" || this.props.room == "Bar"){
             form = <div style={form} className="order-form" class="row">
                         <div class="row gy-2 justify-content-center">
                             <div class="col-10 col-sm-5">
@@ -48,9 +48,6 @@ export class Order extends React.Component {
                             </div>
                         </div>
                     </div>;
-        }
-        else if(this.props.room == "Bar"){
-            form = null;
         }
         return (
             <div className="order" class="container justify-content-md-center">

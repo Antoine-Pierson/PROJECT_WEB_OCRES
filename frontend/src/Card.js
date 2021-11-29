@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card as _Card, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Card as _Card, ListGroup, ListGroupItem, Form } from 'react-bootstrap';
 
 export class Card extends React.Component {
     render() {
@@ -14,7 +14,13 @@ export class Card extends React.Component {
                     </_Card.Text>
                     </_Card.Body>
                     <ListGroup className="list-group-flush">
-                        <ListGroupItem>Cras justo odio</ListGroupItem>
+                        <ListGroupItem>
+                            <Form>
+                                <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                                    <Form.Check type="checkbox" label= {this.props.label} />
+                                </Form.Group>
+                            </Form>
+                        </ListGroupItem>
                     </ListGroup>
                 </_Card>
             </div>
