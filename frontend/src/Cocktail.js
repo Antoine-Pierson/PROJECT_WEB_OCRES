@@ -17,7 +17,6 @@ export class Cocktail extends React.Component {
     }
 
     search () {
-        console.log(this.state.refName);
         this.setState({name: this.state.refName.current.value});
     }
 

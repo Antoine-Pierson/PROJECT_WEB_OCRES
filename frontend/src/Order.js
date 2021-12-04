@@ -26,7 +26,7 @@ export class Order extends React.Component {
             this.state.tabOrder = this.state.tabOrder.concat(<Card table="1"  commande="Poulet Roti" label="Commande prête"/>);
             this.state.tabOrder = this.state.tabOrder.concat(<Card table="2"  commande="Riz Curry" label="Commande prête"/>);
         }
-        else if(this.props.room == "Restaurant" || this.props.room == "Bar"){
+        else if(this.props.room === "Restaurant" || this.props.room === "Bar"){
             form = <div style={form} className="order-form" class="row">
                         <div class="row gy-2 justify-content-center">
                             <div class="col-10 col-sm-5">

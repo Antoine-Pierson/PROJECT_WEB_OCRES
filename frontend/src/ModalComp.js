@@ -8,7 +8,6 @@ export class ModalComp extends React.Component {
         this.state = {
             show: false,
         };
-        this.setShow = this.setShow.bind(this);
     }
 
     setShow (e) {
