@@ -15,13 +15,15 @@ import {PageRestaurant} from './PageRestaurant';
 import {PageCuisine} from './PageCuisine'
 import { PageStat } from './PageStat';
 
+import './Navbar.css';
+
 export class Navbar extends React.Component {
 
     render() {
         return (
             <Router>
-                <div>
-                    <_navbar collapseOnSelect bg="dark" variant="dark" fixed="top" expand="lg">
+                <div className="navbar">
+                    <_navbar collapseOnSelect bg="dark" fixed="top" variant="dark" expand="lg">
                         <_navbar.Brand href="#">
                             <Image src="./Logo.png" width={50} height={35} alt="Logo" />
                             {" "} Logo
@@ -39,7 +41,7 @@ export class Navbar extends React.Component {
                         </_navbar.Collapse>
                     </_navbar>
                 </div>
-                <div>
+                <div className="routes">
                     <Routes>
                         <Route path="/" element= {<PageHome />} />
                         <Route path="/home" element={<PageHome />} />
