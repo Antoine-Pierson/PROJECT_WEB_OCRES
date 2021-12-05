@@ -17,6 +17,8 @@ import { PageStat } from './PageStat';
 
 import './Navbar.css';
 
+import OffCanvasComp from './OffCanvasComp';
+
 export class Navbar extends React.Component {
 
     render() {
@@ -39,7 +41,10 @@ export class Navbar extends React.Component {
                                 <Nav.Link as={Link} to="/stats">Stats</Nav.Link>
                             </Nav>
                         </_navbar.Collapse>
+
+                        <OffCanvasComp name="Spotify" placement="end" />
                     </_navbar>
+                    
                 </div>
                 <div className="routes">
                     <Routes>
