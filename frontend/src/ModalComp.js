@@ -35,9 +35,12 @@ export class ModalComp extends React.Component {
                     </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
+                    <p>Ingrédients</p>
                     <ul>
-                        {this.props.body}
+                        {this.props.ingredients}
                     </ul>
+                    <p>Instructions</p>
+                    <p>{this.props.instructions}</p>
                     </Modal.Body>
                 </Modal>
             </div>
