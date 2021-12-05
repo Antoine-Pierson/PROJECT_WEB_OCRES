@@ -12,7 +12,7 @@ export class Text extends React.Component {
 
     render() {
         return (
-                <p> {this.props.txt} </p> 
+                <p onClick={() => this.props.handleClick(this)}> {this.props.txt} </p> 
         )
     }
 }

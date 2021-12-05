@@ -1,6 +1,7 @@
 import React from 'react';
 import { Modal } from 'react-bootstrap';
 import { Image } from './Image';
+import { Text } from './Text';
 
 export class ModalComp extends React.Component {
     constructor(props) {
@@ -17,7 +18,8 @@ export class ModalComp extends React.Component {
     render() {
         return (
             <div className="modalcomp">
-                <Image src="cocktail-de-champagne.jpeg" handleClick={() => this.setShow(true)} width="300" height="300" />
+                <Image src={this.props.image} handleClick={() => this.setShow(true)} width="300" height="300" />
+                <Text txt = {this.props.title} handleClick={() => this.setShow(true)}/>
 
                 <Modal
                     show={this.state.show}
@@ -33,9 +35,9 @@ export class ModalComp extends React.Component {
                     </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                    <p>
+                    <ul>
                         {this.props.body}
-                    </p>
+                    </ul>
                     </Modal.Body>
                 </Modal>
             </div>
