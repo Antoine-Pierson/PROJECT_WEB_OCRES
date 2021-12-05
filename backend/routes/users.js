@@ -1,9 +1,20 @@
-var express = require('express');
-var router = express.Router();
+const express = require("express")
+const Post = require("../Models/Post.js") // new
+const router = express.Router()
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+// Get all posts
+router.get("/posts", async (req, res) => {
+	const posts = await Post.find()
+	res.send(posts)
+})
 
-module.exports = router;
+router.post("/posts", async (req, res) => {
+	const post = new Post({
+		title: req.body.title,
+		content: req.body.content,
+	})
+	await post.save()
+	res.send(post)
+})
+
+module.exports = router
