@@ -1,6 +1,4 @@
 import React from 'react';
-import { Image } from './Image.js';
-import { Text } from './Text.js';
 import { Carousel } from 'react-bootstrap';
 import './WidgetHome.css'
 
@@ -17,7 +15,7 @@ export class WidgetHome extends React.Component {
                         alt="First slide"
                         />
                         <Carousel.Caption>
-                        <h3>La Gargette</h3>
+                        <h3>La Guinguette</h3>
                         <p>Un lieu cosy et apaisant pour se retrouver autour d'un bon repas !</p>
                         </Carousel.Caption>
                     </Carousel.Item>
