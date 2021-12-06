@@ -25,7 +25,7 @@ export class Navbar extends React.Component {
                 <div className="navbar">
                     <_navbar collapseOnSelect="true" bg="dark" fixed="top" variant="dark" expand="lg">
                         <_navbar.Brand href="#">
-                            <Image src="./logo.jpg" width={50} height={50} alt="logo" />
+                            <Image src="./logo.jpg" width={50} height={50} alt="logo" handleClick={() => ({})}/>
                             {" "} PAPY
                         </_navbar.Brand>
 
