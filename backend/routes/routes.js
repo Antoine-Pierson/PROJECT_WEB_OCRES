@@ -19,7 +19,7 @@ module.exports = app => {
     router.get("/:id", commande.findOne);
 
 
-    router.put("/", commande.update);
+    router.put("/:id", commande.update);
   
 
     router.delete("/:id", commande.delete);

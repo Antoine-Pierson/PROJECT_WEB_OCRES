@@ -63,7 +63,6 @@ exports.findOne = (req, res) => {
 
 
 exports.update = (req, res) => {
-  console.log("oui");
     if (!req.body) {
       return res.status(400).send({
         message: "Data to update can not be empty!"
