@@ -87,6 +87,7 @@ export class Order extends React.Component {
             <div className="order" class="container justify-content-md-center">
                 <h1>ORDERS</h1>
                 {form}
+                <br></br>
                 <Button variant={"primary"} name={"Refresh"} handleChange={this.refresh} type="submit" />
                 <div className="card" class="row">
                     <p>Commande en attente</p>

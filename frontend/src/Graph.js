@@ -13,7 +13,7 @@ const options = {
   }
 };
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+const labels = ['Blue Margarita', 'Mojito', 'Kir', 'Pina Colada', 'Chocolate Milk', 'Bora Bora', 'Blue Lagoon'];
 
 const data = {
   labels: labels,
@@ -50,7 +50,7 @@ export class Graph extends React.Component {
   render() {
       return (
           <div className="Graph">
-            <h1>GRAPH</h1>
+            <h1>Tendances Utilisateurs</h1>
             <div>
               <Chart type="bar" data={data} options={options} width={600} height={400}/>
             </div>

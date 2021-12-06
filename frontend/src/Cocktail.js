@@ -21,6 +21,7 @@ export class Cocktail extends React.Component {
     search () {
         getOneCocktail(this.state.refName.current.value)
         .then(response => {
+            this.setState({drinks: []});
             var dataDrinks = response.drinks;
             if(dataDrinks != null){
                 for (let index = 0; index < dataDrinks.length; index++) {
