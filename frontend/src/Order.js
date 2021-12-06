@@ -3,6 +3,7 @@ import { Card } from './Card';
 import { Button } from './Button';
 import { Form } from 'react-bootstrap';
 import './Order.css'
+import { getCommandeCuisine, getCommandeRestaurant, postCommande, updateCommande } from './Api';
 
 export class Order extends React.Component {
     constructor(props) {
@@ -13,22 +14,53 @@ export class Order extends React.Component {
             table: React.createRef()
         };
         this.addOrder = this.addOrder.bind(this);
+        this.refresh = this.refresh.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(e){
+        if(e.props.label == "Commande prête"){
+            updateCommande(false, false, e.props.table);
+        }
+        else if(e.props.label == "Commande servie"){
+            updateCommande(true, false, e.props.table);
+        }        
     }
 
     addOrder(){
-        this.setState({tabOrder: this.state.tabOrder.concat(<Card table={this.state.table.current.value}  commande={this.state.txtOrder.current.value} label="Commande servie"/>)});
+        postCommande(this.state.table.current.value, this.state.txtOrder.current.value);
     }
 
-     
+    refresh(){
+        if(this.props.room == "Cuisine"){
+            getCommandeCuisine()
+            .then(response => {
+                var tmptab= [];
+                for (let i = 0; i < response.length; i++) {
+                    tmptab = tmptab.concat(<Card table={response[i].table}  commande={response[i].plat} label="Commande prête" handleChange={this.handleChange}/>)
+                }
+                this.setState({tabOrder: tmptab});
+            });
+        }
+        else if(this.props.room === "Restaurant" || this.props.room === "Bar"){
+            getCommandeRestaurant()
+            .then(response => {
+                var tmptab= [];
+                for (let i = 0; i < response.length; i++) {
+                    tmptab = tmptab.concat(<Card table={response[i].table}  commande={response[i].plat} label="Commande servie" handleChange={this.handleChange}/>)
+                }
+                this.setState({tabOrder: tmptab});
+            });
+        }   
+    }
+
+
     render() {
         let form;
         if(this.props.room == "Cuisine"){
-            form = null;
-            this.state.tabOrder = this.state.tabOrder.concat(<Card table="1"  commande="Poulet Roti" label="Commande prête"/>);
-            this.state.tabOrder = this.state.tabOrder.concat(<Card table="2"  commande="Riz Curry" label="Commande prête"/>);
-            console.log(this.state.tabOrder)
         }
         else if(this.props.room === "Restaurant" || this.props.room === "Bar"){
+            
             form = <div style={form} className="order-form" class="row">
                         <div class="row gy-2 justify-content-center">
                             <div class="col-10 col-sm-5">
@@ -55,6 +87,7 @@ export class Order extends React.Component {
             <div className="order" class="container justify-content-md-center">
                 <h1>ORDERS</h1>
                 {form}
+                <Button variant={"primary"} name={"Refresh"} handleChange={this.refresh} type="submit" />
                 <div className="card" class="row">
                     <p>Commande en attente</p>
                     <div class="row g-3">

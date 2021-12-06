@@ -18,7 +18,7 @@ export class Card extends React.Component {
                         <ListGroupItem>
                             <Form>
                                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                                    <Form.Check type="checkbox" label= {this.props.label} />
+                                    <Form.Check type="checkbox" label= {this.props.label} onClick={ () => this.props.handleChange(this)}/>
                                 </Form.Group>
                             </Form>
                         </ListGroupItem>
