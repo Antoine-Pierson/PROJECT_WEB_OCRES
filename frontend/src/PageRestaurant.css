@@ -1,4 +1,42 @@
 .react-calendar{
     justify-content: center;
     align-items: center;
+    float: right;
+    margin: 0.5rem 0 0.5rem 0;
+}
+.badge {
+    float: left;
+}
+
+
+.restaurant-table{
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.res-content{
+    display: flex;
+}
+
+.wrapper {
+    margin: 0.5rem 0 0.5rem 0;
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+}
+
+@media screen and (max-width: 886.98px) {
+    .wrapper{
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (max-width: 479.98px) {
+    .wrapper{
+        grid-template-columns: auto;
+    }
+    .react-calendar{
+        width: 80%;
+        height: auto;
+    }
 }

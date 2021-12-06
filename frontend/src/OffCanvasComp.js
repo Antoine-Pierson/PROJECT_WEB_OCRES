@@ -12,11 +12,11 @@ export default function OffCanvasComp({ name, ...props }) {
 
     return (
         <>
-        <Image src="spotify-icon.svg" handleClick={handleShow} width="5%" height="5%" />
+        <Image src="./spotify-icon.svg" handleClick={handleShow} width="50rem" height="50rem" />
         <Offcanvas show={show} onHide={handleClose} {...props}>
             <Offcanvas.Header closeButton>
             <Offcanvas.Title>
-                <Image src="spotify-name.svg" width="100%" height="100%" />
+                <Image src="./spotify-name.svg" width="100%" height="100%" handleClick={() => {}} />
             </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>

@@ -10,15 +10,15 @@ export class WidgetHome extends React.Component {
         return (
             <div className="widget-home">
                <Carousel fade={false} pause={false}>
-                    <Carousel.Item interval={2000}>
+                    <Carousel.Item interval={4000}>
                         <img
                         className="d-block"
                         src="rest.jpg"
                         alt="First slide"
                         />
                         <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h3>La Gargette</h3>
+                        <p>Un lieu cosy et apaisant pour se retrouver autour d'un bon repas !</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item interval={2000}>
@@ -28,8 +28,8 @@ export class WidgetHome extends React.Component {
                         alt="Second slide"
                         />
                         <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h3>Le Lounge</h3>
+                        <p>Un espace de partage pour rencontrer ou se retrouver autour d'un verre !</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item interval={2000}>
@@ -39,8 +39,8 @@ export class WidgetHome extends React.Component {
                         alt="Third slide"
                         />
                         <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <h3>Les Coulisses</h3>
+                        <p>Un lieu de création où nos grand chefs préparerons des merveilles !</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item interval={2000}>
@@ -50,8 +50,8 @@ export class WidgetHome extends React.Component {
                         alt="Fourth slide"
                         />
                         <Carousel.Caption>
-                        <h3>Fourth slide label</h3>
-                        <p>Praesent commodo cursus magna, consectetur adipiscing elit.</p>
+                        <h3>Les tendances en graphique</h3>
+                        <p>Retrouver les tendances des clients sous forme de graphique</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>

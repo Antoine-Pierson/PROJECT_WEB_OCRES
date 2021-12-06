@@ -14,9 +14,7 @@ import {PageBar} from './PageBar';
 import {PageRestaurant} from './PageRestaurant';
 import {PageCuisine} from './PageCuisine'
 import { PageStat } from './PageStat';
-
 import './Navbar.css';
-
 import OffCanvasComp from './OffCanvasComp';
 
 export class Navbar extends React.Component {
@@ -25,10 +23,10 @@ export class Navbar extends React.Component {
         return (
             <Router>
                 <div className="navbar">
-                    <_navbar collapseOnSelect bg="dark" fixed="top" variant="dark" expand="lg">
+                    <_navbar collapseOnSelect="true" bg="dark" fixed="top" variant="dark" expand="lg">
                         <_navbar.Brand href="#">
-                            <Image src="./Logo.png" width={50} height={35} alt="Logo" />
-                            {" "} Logo
+                            <Image src="./logo.jpg" width={50} height={50} alt="logo" />
+                            {" "} PAPY
                         </_navbar.Brand>
 
                         <_navbar.Toggle aria-control="responsive-navbar-nav"/>
@@ -40,9 +38,10 @@ export class Navbar extends React.Component {
                                 <Nav.Link as={Link} to="/cuisine">Cuisine</Nav.Link>
                                 <Nav.Link as={Link} to="/stats">Stats</Nav.Link>
                             </Nav>
+                            <OffCanvasComp name="Spotify" placement="end" />
                         </_navbar.Collapse>
 
-                        <OffCanvasComp name="Spotify" placement="end" />
+                        
                     </_navbar>
                     
                 </div>

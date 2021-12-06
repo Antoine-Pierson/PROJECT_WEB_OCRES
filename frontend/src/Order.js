@@ -2,6 +2,7 @@ import React from 'react';
 import { Card } from './Card';
 import { Button } from './Button';
 import { Form } from 'react-bootstrap';
+import './Order.css'
 
 export class Order extends React.Component {
     constructor(props) {
@@ -25,6 +26,7 @@ export class Order extends React.Component {
             form = null;
             this.state.tabOrder = this.state.tabOrder.concat(<Card table="1"  commande="Poulet Roti" label="Commande prête"/>);
             this.state.tabOrder = this.state.tabOrder.concat(<Card table="2"  commande="Riz Curry" label="Commande prête"/>);
+            console.log(this.state.tabOrder)
         }
         else if(this.props.room === "Restaurant" || this.props.room === "Bar"){
             form = <div style={form} className="order-form" class="row">
