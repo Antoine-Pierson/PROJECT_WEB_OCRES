@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from './Button';
 import { Image } from './Image';
 import { Nav, Navbar as _navbar }  from 'react-bootstrap';
 import {

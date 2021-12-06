@@ -1,9 +1,7 @@
 import React from 'react';
-import { Image } from './Image';
-import { Text } from './Text';
 import { ModalComp } from './ModalComp';
 import { Button } from './Button';
-import {getAllCocktail, getOneCocktail} from './Api.js';
+import { getOneCocktail } from './Api.js';
 
 export class Cocktail extends React.Component {
     constructor(props) {

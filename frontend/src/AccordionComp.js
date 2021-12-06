@@ -1,7 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
 import "./AccordionComp.css";
 import Chevron from './chevron.svg';
-import { Button } from './Button';
 
 export default function Accordion(props) {
 
